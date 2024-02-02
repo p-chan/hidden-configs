@@ -1,1 +1,3 @@
-module.exports = require('./prettier')
+import prettierConfig from './dist/index.js'
+
+export default prettierConfig
