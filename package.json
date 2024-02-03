@@ -15,15 +15,26 @@
     "url": "https://github.com/p-chan/hidden-configs.git"
   },
   "scripts": {
+    "build": "tsup",
     "fix": "prettier --write .",
     "lint": "prettier --check ."
   },
   "dependencies": {},
   "devDependencies": {
-    "prettier": "3.2.4"
+    "@tsconfig/node20": "20.1.2",
+    "prettier": "3.2.4",
+    "tsup": "8.0.1",
+    "typescript": "5.3.3"
   },
   "peerDependencies": {
     "prettier": "^3.0.0"
   },
-  "packageManager": "pnpm@8.15.1"
+  "exports": {
+    "./prettier": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "packageManager": "pnpm@8.15.1",
+  "type": "module"
 }
